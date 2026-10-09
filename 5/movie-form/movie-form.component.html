@@ -1,0 +1,64 @@
+<input
+  type="text"
+  id="title"
+  name="title"
+  [(ngModel)]="newMovie.title"
+  required
+  minlength="3"
+  maxlength="50"
+  #titleRef="ngModel"
+/>
+<div *ngIf="submitted && titleRef.invalid" class="error">
+  <small *ngIf="titleRef.errors?.['required']">
+    Введіьть нащзву фільму
+  </small>
+  <small *ngIf="titleRef.errors?.['minlength']">
+    Назва має містити мінімум 3 символа
+  </small>
+  <small *ngIf="titleRef.errors?.['maxlength']">
+    Назва має містити максимум 50 символа
+  </small>
+</div>
+<input
+  type="text"
+  id="director"
+  name="director"
+  [(ngModel)]="newMovie.director"
+  required
+  minlength="3"
+  maxlength="40"
+  #directorRef="ngModel"
+/>
+<div *ngIf="submitted && directorRef.invalid" class="error">
+  <small *ngIf="directorRef.errors?.['required']">
+    Введіть дирктора чи режисера чи 
+  </small>
+  <small *ngIf="directorRef.errors?.['minlength']">
+    Ім'я диреко тора чи режисера має містити мінімум 3 букви. Янів не існує.
+  </small>
+  <small *ngIf="directorRef.errors?.['maxlength']">
+    Ім'я директора максимум маж містити 40 букв
+  </small>
+</div>
+<textarea
+  id="description"
+  name="description"
+  rows="4"
+  [(ngModel)]="newMovie.description"
+  required
+  minlength="10"
+  maxlength="200"
+  #descriptionRef="ngModel"
+></textarea>
+<div *ngIf="submitted && descriptionRef.invalid" class="error">
+  <small *ngIf="descriptionRef.errors?.['required']">
+    Опис с обов'я зковий
+  </small>
+  <small *ngIf="descriptionRef.errors?.['minlength']">
+    Опис мінімум 10 букв
+  </small>
+  <small *ngIf="descriptionRef.errors?.['maxlength']">
+    ОПис макисимум  200 букв
+  </small>
+</div>
+<button type="submit">Дщодати   фільм</button>

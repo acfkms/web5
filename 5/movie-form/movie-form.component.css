@@ -1,0 +1,55 @@
+.form-group {
+  margin-bottom:auto;
+}
+label {
+  display: block;
+  font-weight: bold;
+  margin-bottom:auto;
+}
+input,
+textarea {
+  width:auto;
+  padding: 8px;
+  border: 1px solid #FFF5F5;
+  border-radius: 4px;
+  font-size:small;
+  box-sizing: border-box;
+}
+input.ng-invalid.ng-touched,
+textarea.ng-invalid.ng-touched {
+  border-color: #EB4C4C;
+}
+.error {
+  color: #9E3B3B;
+  margin-top:auto;
+}
+.error small {
+  display: block;
+}
+button {
+  padding: 10px 20px;
+  background-color: #EA9D9D;
+  color: #F6F4E8;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+  font-size:small;
+}
+button:hover {
+  background-color: #FFEBB8;
+}
+.movie-card {
+  border: 1px solid #F7D6D0;
+  border-radius: 6px;
+  padding: 10px 15px;
+  margin:auto;
+  background-color: #FFF5F5;
+}
+.movie-card h4 {
+  margin:auto;
+  color: #601D49;
+}
+.movie-card p {
+  margin:auto;
+  color: #BD5579;
+}
